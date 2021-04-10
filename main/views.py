@@ -37,6 +37,7 @@ def add_user_location(request,pk):
             data = {
                 'msg':"Your Location has been added and This place is not infected"
             }
+            user_locations.objects.create(auth = request.user,locations = loc)
             return render(request,'main/add_user_location.html',data)
     else:
         messages.warning(request, 'Login / Sign Up to add your location')
