@@ -15,7 +15,7 @@ class location(models.Model):
 
     
     def save(self,*args,**kwargs):
-        qrcode_img = qrcode.make("http://localhost:8000/location/{}".format(self.id))
+        qrcode_img = qrcode.make("https://asistan36.herokuapp.com//location/{}".format(self.id))
         canvas = Image.new('RGB',(500,500),'white')
         draw = ImageDraw.Draw(canvas)
         canvas.paste(qrcode_img)

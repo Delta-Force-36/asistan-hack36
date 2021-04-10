@@ -1,0 +1,1 @@
+web: gunicorn asistan.wsgi --log-file -
