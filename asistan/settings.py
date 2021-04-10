@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '_zzu^giogd#qec0ahejpnm&s8-cm3un=vnbefo#t2_dn@7tpmc'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['asistan36.herokuapp.com']
+ALLOWED_HOSTS = ['asistan36.herokuapp.com','localhost']
 
 
 # Application definition
@@ -131,6 +131,6 @@ STATICFILES_DIRS = (
 )
 
 
-MEDIA_URL = 'media'
+MEDIA_URL = '/media/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_ROOT = os.path.join(BASE_DIR,'static/media/')
