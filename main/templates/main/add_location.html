@@ -1,0 +1,12 @@
+{% extends 'main/base.html' %}
+{% block main %}
+<div class="flex w-screen flex-row">
+    <form method="POST"> {% csrf_token %}
+        <div class="flex flex-col w-full justify-center items-center m-4">
+        <input name='location_name' type="text" placeholder="Location name" class="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm">
+        <input type="submit">
+        </div>  
+    </form>
+</div>
+
+{% endblock %}
