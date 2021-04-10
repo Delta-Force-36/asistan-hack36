@@ -26,9 +26,7 @@ Markdown==3.3.4
 Pillow==8.1.2
 psycopg2==2.8.6
 pycparser==2.20
-pypiwin32==223
 pytz==2021.1
-pywin32==300
 qrcode==6.1
 requests==2.25.1
 screen-brightness-control==0.8.5
@@ -39,6 +37,4 @@ urllib3==1.26.4
 validators==0.18.2
 virtualenv==20.4.2
 whitenoise==5.2.0
-win10toast==0.9
-win32-setctime==1.0.3
 WMI==1.5.1
