@@ -37,4 +37,3 @@ urllib3==1.26.4
 validators==0.18.2
 virtualenv==20.4.2
 whitenoise==5.2.0
-WMI==1.5.1
