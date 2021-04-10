@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@600&display=swap');
+
+*:focus {
+    outline: 0 !important;
+}
+.font{
+    font-family: 'Recursive', sans-serif;
+}
+
+.input{
+    color: black;
+    background-color: transparent;
+    outline: none;
+}
+
+.input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #A5B4FC;
+    opacity: 1; /* Firefox */
+}
+
