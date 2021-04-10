@@ -29,5 +29,7 @@ class location(models.Model):
 class user_locations(models.Model):
     auth = models.ForeignKey(User,on_delete=models.CASCADE)
     locations = models.ForeignKey(location,on_delete=models.CASCADE)
+    infected = models.BooleanField(default=False)
+
 
     

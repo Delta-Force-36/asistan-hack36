@@ -1,5 +1,16 @@
 {% extends 'main/base.html' %}
 {% block main %}
+
+{% if messages %}
+<div class="flex justify-center items-center p-2 bg-yellow-500 bg-opacity-25 border-b-2 border-yellow ">
+    {% for message in messages %}
+    <div class="flex">
+    <a>{{ message }}</a>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
 <div class="flex w-screen flex-row">
     <form method="POST"> {% csrf_token %}
         <div class="flex flex-col w-full justify-center items-center m-4">
