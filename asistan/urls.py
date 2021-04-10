@@ -25,7 +25,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('profile/',include('accounts.urls')),
     path('',include('main.urls'),name = 'posts'),
-    path('polling/',include('polling.urls'),name='polling')
 ]
 
 urlpatterns += staticfiles_urlpatterns()
