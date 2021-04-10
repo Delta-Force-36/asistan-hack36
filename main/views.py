@@ -4,13 +4,13 @@ from .models import location,user_locations
 from django.contrib import messages
 # Create your views here.
 def main(request):
-
-    user = request.user 
-
-    data = {
-        'user':user,
-    }
-    return render(request,'main/base.html',data)
+    if request.user.is_authenticated:
+        data = {
+            'locs':location.objects.all().filter(auth = request.user)
+        }
+        print(data)
+        return render(request,'main/locations.html',data)
+    return render(request,'main/base.html')
 
 def new_location(request):
     if request.user.is_authenticated:
@@ -29,24 +29,25 @@ def new_location(request):
 def add_user_location(request,pk):
     if request.user.is_authenticated:
         loc = location.objects.all().filter(id = pk)[0]
-        user_loc = user_locations(auth = request.user,locations = loc)
-        user_loc.save()
 
-        inf_loc = user_locations.objects.all().filter(locations = loc)
-        for loc in inf_loc:
-            print(loc.locations.location_name)
-        data = {
-            'msg':"Your Location has been added"
-        }
-        return render(request,'main/add_user_location.html',data)
+        if loc.infected:
+            messages.warning(request, 'Your Location Has been infected')
+            return render(request,'main/add_user_location.html')
+        else:
+            data = {
+                'msg':"Your Location has been added and This place is not infected"
+            }
+            return render(request,'main/add_user_location.html',data)
     else:
         messages.warning(request, 'Login / Sign Up to add your location')
-        return render(request,'main/add_location.html')
+        return render(request,'main/add_user_location.html')
 
 def cpos(request):
     if request.user.is_authenticated:
         inf = user_locations.objects.all().filter(auth = request.user)
         for i in inf:
+            i.locations.infected = True
+            i.locations.save()
             i.infected = True
             i.save()
         return render(request,'main/cpos.html')

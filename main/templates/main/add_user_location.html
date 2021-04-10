@@ -1,8 +1,17 @@
 {% extends 'main/base.html' %}
 {% block main %}
+{% if messages %}
 <div class="flex justify-center items-center p-2 bg-yellow-500 bg-opacity-25 border-b-2 border-yellow ">
-    {% if msg %}
-    {{msg}}
-    {% endif %}
+    {% for message in messages %}
+    <div class="flex">
+    <a>{{ message }}</a>
+    </div>
+    {% endfor %}
 </div>
+{% endif %}
+{% if msg %}
+<div class="flex justify-center items-center p-2 bg-yellow-500 bg-opacity-25 border-b-2 border-yellow ">
+    {{msg}}
+</div>
+{% endif %}
 {% endblock %}

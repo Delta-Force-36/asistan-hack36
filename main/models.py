@@ -10,6 +10,7 @@ class location(models.Model):
     location_name = models.CharField(max_length =200)
     location_url = models.CharField(max_length=200,blank=True)
     qr_code = models.ImageField(blank=True)
+    infected = models.BooleanField(default=False)
     auth = models.ForeignKey(User,on_delete=models.CASCADE)
 
     
