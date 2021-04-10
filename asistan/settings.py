@@ -25,7 +25,7 @@ SECRET_KEY = '_zzu^giogd#qec0ahejpnm&s8-cm3un=vnbefo#t2_dn@7tpmc'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['asistan36.herokuapp.com','localhost']
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -127,10 +127,9 @@ STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR,'static'),
-    os.path.join(BASE_DIR,'media'),
 )
 
 
 MEDIA_URL = '/media/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR,'static/media/')
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
