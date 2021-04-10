@@ -3,7 +3,7 @@
     {% for loc in locs %}
     <div class="flex flex-col w-full p-4">
         <a class="font text-xl">{{loc.location_name}}</a>
-        <img src="{{MEDIA_URL}}{{loc.qr_code}}" height="500" width="500">
+        <img src="{{loc.qr_code.url}}" height="500" width="500">
     </div>
     {% endfor %}
 {% endblock %}
