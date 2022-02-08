@@ -1,4 +1,4 @@
-<h1 align="center">Asistan By Delta Force</h1>
+<h1 align="center">Asistan By Team "Delta Force"</h1>
 <p align="center">
 </p>
 
@@ -22,7 +22,7 @@ The web app allows you to enter the locations that you have visited in past few 
 Team Name: Delta Force
 
 * [Akash Kandasamy](https://github.com/akash-kd)
-* [Sherya Gupta](https://github.com/sherya119)
+* [Sherya Gupta](https://github.com/shreya119)
 * [Prakhar](https://github.com/prackode)
 * [Nish](https://github.com/got5PH1NE)
 
