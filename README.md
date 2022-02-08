@@ -22,8 +22,8 @@ The web app allows you to enter the locations that you have visited in past few 
 Team Name: Delta Force
 
 * [Akash Kandasamy](https://github.com/akash-kd)
-* [Sherya Gupta](https://github.com/shreya119)
-* [Prakhar](https://github.com/prackode)
-* [Nish](https://github.com/got5PH1NE)
+* [Shreya Gupta](https://github.com/shreya119)
+* [Prakhar Agarwal](https://github.com/prackode)
+* [Nishchay Chaurasia](https://github.com/got5PH1NE)
 
 <a href="https://hack36.com"> <img src="http://bit.ly/BuiltAtHack36" height=20px> </a>
